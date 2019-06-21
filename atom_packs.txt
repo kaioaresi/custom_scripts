@@ -1,0 +1,30 @@
+[36mCommunity Packages (28)[39m /home/kasantos/.atom/packages
+├── advanced-open-file@0.16.8
+├── ask-stack@2.2.0
+├── atom-beautify@0.33.4
+├── atom-file-icons@0.7.1
+├── atom-mermaid@3.3.1
+├── atom-search-everywhere@1.1.0
+├── auto-indent@0.5.0
+├── busy-signal@2.0.1
+├── highlight-line@0.12.0
+├── highlight-selected@0.16.0
+├── indent-guide-improved@1.4.13
+├── intentions@1.1.5
+├── language-terraform@0.8.1
+├── lines@0.13.1
+├── linter@2.3.0
+├── linter-kubectl@1.0.1
+├── linter-terraform-syntax@1.3.1
+├── linter-ui-default@1.7.1
+├── markdown-preview-enhanced@0.16.1
+├── minimap@4.29.9
+├── minimap-highlight-selected@4.6.1
+├── minimap-lens@0.2.0
+├── minimap-linter@2.2.1
+├── multi-cursor@2.1.5
+├── open-recent@5.0.0
+├── platformio-ide-terminal@2.9.1
+├── project-manager@3.3.7
+└── python-tools@0.6.9
+
