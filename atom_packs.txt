@@ -28,3 +28,5 @@
 ├── project-manager@3.3.7
 └── python-tools@0.6.9
 
+apm list --installed --bare
+apm install --packages-file my-package-list.txt
