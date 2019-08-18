@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Manteiner: Kaio Cesar <kasantos@bionexo.com>
+# Maintainer: Kaio Cesar <kasantos@bionexo.com>
 # Description: Criar um link simbolico para o '~/.kube'.
 # Pré-requisito:
 #   - Crie um diretorio em seu HOME '.kube_<nome do perfil>'
@@ -14,6 +14,8 @@ KUBE_FILE_NAME=$(basename $0)
 
 function lista_perfis() {
   if [[ $KUBE_ENV == "default" ]]; then
+    echo -e "Perfil corrente --> '$(ls -lhd $KUBE_PADRAO* | sed 's#.*.kube_##g' | head -1)'\n"
+    echo -e "Lista de perfis:"
     ls -lhd $KUBE_PADRAO* | sed 's#.*.kube_# - #g'
   elif [[ $KUBE_ENV == "--help" || $KUBE_ENV == "-h"   ]]; then
     echo -e "Exemplo de uso $KUBE_FILE_NAME:\n\tCrie um diretorio em seu HOME '.kube_<nome do perfil>'\n\t$KUBE_FILE_NAME <nome perfil> "
