@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# Maintainer: Kaio Cesar <kasantos@bionexo.com>
+# Description: Criar um link simbolico para o '~/.kube'.
+# Pré-requisito:
+#   - Crie um diretorio em seu HOME '.kube_<nome do perfil>'
+#
+# Copie o arquivo em questão o mova para /urs/bin/kube
+#
+
+KUBE_ENV=${1-default}
+KUBE_PADRAO="${HOME}/.kube"
+KUBE_DIR="${KUBE_PADRAO}_${KUBE_ENV}"
+KUBE_FILE_NAME=$(basename $0)
+
+function lista_perfis() {
+  if [[ $KUBE_ENV == "default" ]]; then
+    echo -e "Perfil corrente --> '$(ls -lhd $KUBE_PADRAO* | sed 's#.*.kube_##g' | head -1)'\n"
+    echo -e "Lista de perfis:"
+    ls -lhd $KUBE_PADRAO* | sed 's#.*.kube_# - #g'
+  elif [[ $KUBE_ENV == "--help" || $KUBE_ENV == "-h"   ]]; then
+    echo -e "Exemplo de uso $KUBE_FILE_NAME:\n\tCrie um diretorio em seu HOME '.kube_<nome do perfil>'\n\t$KUBE_FILE_NAME <nome perfil> "
+  elif [[ -d ${KUBE_DIR}  ]]; then
+    echo "Alterando perfil para $KUBE_ENV."
+    rm -f $KUBE_PADRAO
+    ln -s $KUBE_DIR $KUBE_PADRAO
+  else
+    echo "Dir não exist '${KUBE_DIR}'"
+    exit 1
+  fi
+}
+
+lista_perfis $1
