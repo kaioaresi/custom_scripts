@@ -1,0 +1,13 @@
+atom-beautify@0.33.4
+atom-mermaid@3.4.1
+autocomplete-modules@2.3.0
+autocomplete-python@1.16.0
+docker@0.8.0
+highlight-selected@0.16.0
+indent-guide-improved@1.4.13
+language-ansible@0.2.2
+linter-ansible-syntax@1.2.3
+markdown-preview-plus@2.4.16
+minimap@4.29.9
+open-recent@5.0.0
+
