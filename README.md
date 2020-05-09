@@ -6,13 +6,14 @@
 
 ## Atom
 
-# Export
+### Export
 apm list --installed --bare > atom_packs.txt
 
-# Import
+### Import
 apm install --packages-file atom_packs.txt
 
 ---
+## Terminator
 
 Atalho | Descrição |
 :---:|:---:
@@ -28,3 +29,9 @@ SUPER+SHIFT+G | Desagrupar
 CTRL+SHIFT+W | Para fechar um terminal
 CTRL+SHIFT+Q | Para fechar todos os terminais
 CTRL+SHIFT+F | Pesquisa na saída de um terminal
+
+---
+
+## Tilix terminal
+
+> https://gnunn1.github.io/tilix-web/
