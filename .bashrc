@@ -47,7 +47,7 @@ function parse_git_dirty {
 
 #export PS1="\u@\h_[\[\e[32m\]\W\[\e[m\]]\[\e[31m\]\`parse_git_branch\`\[$(kube_ps1)] [\e[m\]\\$:  "
 
-export PS1='\u@\h [\033[32m\W\033[0m] $(kube_ps1)] `parse_git_branch`\$ '
+export PS1='\u@\h [\033[32m\W\033[0m]$(kube_ps1)`parse_git_branch`$ '
 
 source /etc/profile.d/bash_completion.sh
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"

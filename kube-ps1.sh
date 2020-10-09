@@ -233,7 +233,7 @@ _kube_ps1_get_context() {
   if [[ "${KUBE_PS1_CONTEXT_ENABLE}" == true ]]; then
     KUBE_PS1_CONTEXT="$(${KUBE_PS1_BINARY} config current-context 2>/dev/null)"
     # Set namespace to 'N/A' if it is not defined
-    KUBE_PS1_CONTEXT="${KUBE_PS1_CONTEXT:-N/A}"
+    KUBE_PS1_CONTEXT="${KUBE_PS1_CONTEXT:-}"
 
     if [[ ! -z "${KUBE_PS1_CLUSTER_FUNCTION}" ]]; then
       KUBE_PS1_CONTEXT=$($KUBE_PS1_CLUSTER_FUNCTION $KUBE_PS1_CONTEXT)
