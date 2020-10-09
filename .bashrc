@@ -4,7 +4,7 @@ function parse_git_branch() {
 	if [ ! "${BRANCH}" == "" ]
 	then
 		STAT=`parse_git_dirty`
-		echo "[${BRANCH}${STAT}]"
+		echo -e "[\e[31m${BRANCH}${STAT}\e[0m]"
 	else
 		echo ""
 	fi
@@ -45,4 +45,11 @@ function parse_git_dirty {
 	fi
 }
 
-export PS1="\u@\h_[\[\e[32m\]\W\[\e[m\]]\[\e[31m\]\`parse_git_branch\`\[\e[m\]\\$:  "
+#export PS1="\u@\h_[\[\e[32m\]\W\[\e[m\]]\[\e[31m\]\`parse_git_branch\`\[$(kube_ps1)] [\e[m\]\\$:  "
+
+export PS1='\u@\h [\033[32m\W\033[0m] $(kube_ps1)] `parse_git_branch`\$ '
+
+source /etc/profile.d/bash_completion.sh
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+source <(kubectl completion bash)
+source /home/aresi/Projetos/kube-ps1/kube-ps1.sh
