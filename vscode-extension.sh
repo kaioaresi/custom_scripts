@@ -1,0 +1,12 @@
+code --install-extension dongli.python-preview
+code --install-extension hashicorp.terraform
+code --install-extension hbenl.vscode-test-explorer
+code --install-extension ms-azuretools.vscode-docker
+code --install-extension ms-python.python
+code --install-extension ms-python.vscode-pylance
+code --install-extension ms-toolsai.jupyter
+code --install-extension ms-vscode-remote.remote-containers
+code --install-extension ms-vscode.test-adapter-converter
+code --install-extension njpwerner.autodocstring
+code --install-extension recca0120.vscode-phpunit
+code --install-extension wayou.vscode-todo-highlight
